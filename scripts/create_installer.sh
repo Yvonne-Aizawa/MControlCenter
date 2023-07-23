@@ -13,8 +13,8 @@ mkdir $APP_DIR
 
 cp ../build/mcontrolcenter $APP_DIR
 cp ../build/helper/mcontrolcenter-helper $APP_DIR
-cp ../build/src/helper/mcontrolcenter-helper.conf ../src/helper/mcontrolcenter.helper.service $APP_DIR
-cp ../build/resources/mcontrolcenter.desktop ../resources/mcontrolcenter.svg $APP_DIR
+cp ../src/helper/mcontrolcenter-helper.conf ../src/helper/mcontrolcenter.helper.service $APP_DIR
+cp ../resources/mcontrolcenter.desktop ../resources/mcontrolcenter.svg $APP_DIR
 
 cp ./install.sh ./uninstall.sh $DIST_DIR
 
