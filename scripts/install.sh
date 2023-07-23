@@ -1,11 +1,11 @@
 #!/bin/bash -e
 
-BIN_PATH='/usr/bin/'
-LIB_EXEC_PATH='/usr/libexec/'
-SCALABLE_ICONS_PATH='/usr/share/icons/hicolor/scalable/apps/'
-SHORTCUTS_PATH='/usr/share/applications/'
-DBUS_SYSTEM_PATH='/usr/share/dbus-1/system.d/'
-DBUS_SERVICES_PATH='/usr/share/dbus-1/system-services/'
+BIN_PATH='$out/usr/bin/'
+LIB_EXEC_PATH='$out/usr/libexec/'
+SCALABLE_ICONS_PATH='$out/usr/share/icons/hicolor/scalable/apps/'
+SHORTCUTS_PATH='$out/usr/share/applications/'
+DBUS_SYSTEM_PATH='$out/usr/share/dbus-1/system.d/'
+DBUS_SERVICES_PATH='$out/usr/share/dbus-1/system-services/'
 
 APP_DIR='./app/'
 

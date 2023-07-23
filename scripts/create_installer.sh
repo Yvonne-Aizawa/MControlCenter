@@ -18,6 +18,6 @@ cp ../resources/mcontrolcenter.desktop ../resources/mcontrolcenter.svg $APP_DIR
 
 cp ./install.sh ./uninstall.sh $DIST_DIR
 
-tar -czvf $DIST_DIR.tar.gz $DIST_DIR
+# tar -czvf $DIST_DIR.tar.gz $DIST_DIR
 
-rm -r $DIST_DIR
+# rm -r $DIST_DIR
