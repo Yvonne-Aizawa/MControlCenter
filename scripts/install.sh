@@ -7,7 +7,7 @@ SHORTCUTS_PATH='$out/usr/share/applications/'
 DBUS_SYSTEM_PATH='$out/usr/share/dbus-1/system.d/'
 DBUS_SERVICES_PATH='$out/usr/share/dbus-1/system-services/'
 
-APP_DIR='./app/'
+
 
 APP_BIN='mcontrolcenter'
 SVG_ICON='mcontrolcenter.svg'
@@ -18,18 +18,18 @@ DBUS_SERVICE='mcontrolcenter.helper.service'
 
 echo "Installation start"
 
-install -vDm755 $APP_DIR$APP_BIN $BIN_PATH$APP_BIN
+install -vDm755 ./app/mcontrolcenter $out/usr/bin/mcontrolcenter
 
-rm -fv /home/$SUDO_USER/.local/share/applications/$SHORTCUT
-install -vDm644 $APP_DIR$SHORTCUT $SHORTCUTS_PATH$SHORTCUT
+rm -fv /home/$SUDO_USER/.local/share/applications/mcontrolcenter.desktop
+install -vDm644 ./app/mcontrolcenter.desktop $out/usr/share/applications/mcontrolcenter.desktop
 
-install -vDm644 $APP_DIR$SVG_ICON $SCALABLE_ICONS_PATH$SVG_ICON
+install -vDm644 ./app/mcontrolcenter.svg $out/usr/share/icons/hicolor/scalable/apps/mcontrolcenter.svg
 
-install -vDm755 $APP_DIR$HELPER_BIN $LIB_EXEC_PATH$HELPER_BIN
+install -vDm755 ./app/mcontrolcenter-helper $out/usr/libexec/mcontrolcenter-helper
 
-install -vDm644 $APP_DIR$DBUS_CONF $DBUS_SYSTEM_PATH$DBUS_CONF
+install -vDm644 ./app/mcontrolcenter-helper.conf $out/usr/share/dbus-1/system.d/mcontrolcenter-helper.conf
 
-install -vDm644 $APP_DIR$DBUS_SERVICE $DBUS_SERVICES_PATH$DBUS_SERVICE
+install -vDm644 ./app/mcontrolcenter.helper.service $out/usr/share/dbus-1/system-services/mcontrolcenter.helper.service
 
 echo "Installation was successful"
 
